@@ -1,0 +1,47 @@
+<html>
+  <body>
+
+    <p> <%= @candidate.blurb  %> </p>
+    <table border="true">
+      <tr>
+        <td>Job</td>
+        <td><%=@candidate.job%></td>
+      </tr>
+      <tr>
+        <td>Company</td>
+        <td><%=@candidate.company%></td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td><%=@candidate.email%></td>
+      </tr>
+      <tr>
+        <td>Ideal Role</td>
+        <td><%=@candidate.ideal_role%></td>
+      </tr>
+      <% if @candidate.website.present? %>
+        <tr>
+          <td colspan="2"><a href="<%@candidate.website.href%>"><%=@candidate.website.text %></a></td>
+        </tr>
+      <% end %>
+      <% if @candidate.resume.present? %>
+        <tr>
+          <td colspan="2"><a href="<%=@candidate.resume.href%>">Resume</a></td>
+        </tr>
+      <%end%>
+    </table>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
