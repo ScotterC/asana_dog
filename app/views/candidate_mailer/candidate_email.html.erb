@@ -21,12 +21,14 @@
       </tr>
       <% if @candidate.website.present? %>
         <tr>
-          <td colspan="2"><a href="<%@candidate.website.href%>"><%=@candidate.website.text %></a></td>
+          <td><%=@candidate.website.text%></td>
+          <td><%=@candidate.website.href%></td>
         </tr>
       <% end %>
       <% if @candidate.resume.present? %>
         <tr>
-          <td colspan="2"><a href="<%=@candidate.resume.href%>">Resume</a></td>
+          <td>Resume</td>
+          <td><%=@candidate.resume.href%></td>
         </tr>
       <%end%>
     </table>

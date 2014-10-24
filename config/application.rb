@@ -28,12 +28,13 @@ module AsanaDog
     ActionMailer::Base.perform_deliveries = true
     ActionMailer::Base.raise_delivery_errors = true
 
-
     config.action_mailer.smtp_settings = {
       :address   => env_var('SMTP_ADDRESS'),
       :port      => ENV.fetch('SMTP_PORT', 587),
       :user_name => env_var('SMTP_USERNAME'),
-      :password  => env_var('SMTP_PASSWORD')
+      :password  => env_var('SMTP_PASSWORD'),
+      :authentication => 'login',
+      :enable_starttls_auto => true
     }
 
 
