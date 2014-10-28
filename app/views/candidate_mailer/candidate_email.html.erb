@@ -19,31 +19,16 @@
         <td>Ideal Role</td>
         <td><%=@candidate.ideal_role%></td>
       </tr>
-      <% if @candidate.website.present? %>
-        <tr>
-          <td><%=@candidate.website.text%></td>
-          <td><%=@candidate.website.href%></td>
-        </tr>
-      <% end %>
-      <% if @candidate.resume.present? %>
-        <tr>
-          <td>Resume</td>
-          <td><%=@candidate.resume.href%></td>
-        </tr>
-      <%end%>
+      <tr>
+        <td>Website</td>
+        <td><%=@candidate.website%></td>
+      </tr>
+      <tr>
+        <td>Resume</td>
+        <td><%=@candidate.resume%></td>
+      </tr>
     </table>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
 
 
