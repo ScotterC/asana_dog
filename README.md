@@ -9,9 +9,9 @@ Clone the project locally and run a script that points to your json dump.  You'l
 
 ```bash
 SMTP_ADDRESS=smtp.yourmail.com \
-SMTP_USERNAME=someusername@yourserver.com \
+SMTP_USERNAME=someusername@yourcompany.com \
 SMTP_PASSWORD=supersecretpassword \
-FROM_ADDRESS=thefromaddress \
+FROM_ADDRESS=thefromaddress@yourcompany.com \
 TO_ADDRESS="x+12345678@mail.asana.com" \
 ./bin/forward ./tmp/candidates.json
 ```
